@@ -1,30 +1,55 @@
-var parrafo = document.getElementById('parrafo');
-parrafo.innerHTML = 'Hola Mundo';
-parrafo.setAttribute('style', 'color: red;');
-
-var btn1 = document.getElementById('btn1');
-
-btn1.value = "Caja qlia";
-btn1.type = "text";
 
 
-var span = document.createElement('span');
-let texto = document.createTextNode('Un lorem upso');
-span.appendChild(texto);
-document.body.appendChild(span);
+var dato1 = {
+    nombre: 'Juan',
+    edad: 25
+};
+
+var dato2 ={
+    nombre: 'Maria',
+    edad: 30
+};
+
+var dato3 ={
+    nombre: 'Pedro',
+    edad: 35
+};
+
+var dato4 = {
+    nombre: 'Jose',
+    edad: 40
+};
+
+var dato5 = {
+    nombre: 'Carlos',
+    edad: 5
+};
+var list = document.getElementById('lista');
+
+var datos = [dato1, dato2, dato3, dato4, dato5];
+
+datos.forEach(function(dato) {
+    var listItem = document.createElement('li');
+    listItem.textContent = `${dato.nombre}, ${dato.edad} años`  ;
+
+    listItem.addEventListener('mouseover', function() {
+        listItem.style.color = 'blue';
+        if(dato.edad < 18){
+            listItem.style.color = 'red';
+        }
+    });
+
+    listItem.addEventListener('mouseout', function() {
+        listItem.style.color = 'black';
+        if(dato.edad < 18){
+            listItem.style.color = 'yellow';
+        }
+    });
+
+    list.appendChild(listItem);
+});
 
 
-var caja = document.getElementById('box');
-var btn2 = document.createElement('input');
-btn2.setAttribute('type', 'button');
-btn2.setAttribute('value', 'Boton nuevo');
-document.body.replaceChild(btn2, caja);
 
-let box = document.getElementById('box');
-box.addEventListener('click', function(){ alert('Hola mundo'); });
-
-box.addEventListener('mouseover', function(){ alert('cambio'); });
-
-box.addEventListener('mouseout', function(){ alert('cambio denuevo'); });
 
 
