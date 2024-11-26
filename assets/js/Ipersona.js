@@ -1,4 +1,4 @@
-/*
+
 
 
 class Ipersona {
@@ -16,6 +16,6 @@ class Ipersona {
 }
 
 export { Ipersona as default };
-*/
+
 var parrafo = document.getElementById("p");
 parrafo.innerHTML = "Hola Mundo"; 
