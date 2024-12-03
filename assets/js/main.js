@@ -1,9 +1,9 @@
 $(document).ready(function() {
     $('div').hide();
-    $('div').text('Hello World');
+    //$('div').text('Hello World');
     $('div').addClass('info');
     $('.info').show();
-    $('div').css('color', 'red');
+    //$('div').css('color', 'red');
 
 //filtros
     $('ul.my-list>li>a:first').text('First');
@@ -28,3 +28,12 @@ $(document).ready(function() {
     
     
 });
+
+
+    $('p').hover(function(){
+        $('p').text('control de version');
+        $('p').css('color','blue');
+    },
+    function(){
+        $('p').css('color', 'black');
+    });
