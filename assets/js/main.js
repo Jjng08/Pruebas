@@ -37,3 +37,15 @@ $(document).ready(function() {
     function(){
         $('p').css('color', 'black');
     });
+
+    $("p").on({
+        mouseenter: function(){
+        $(this).css("background-color", "lightgray");
+        },
+        mouseleave: function(){
+        $(this).css("background-color", "lightblue");
+        },
+        click: function(){
+        $(this).css("background-color", "yellow");
+        }
+        });
